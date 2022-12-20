@@ -7,6 +7,8 @@ public class AlooScript : MonoBehaviour
     public Rigidbody2D rigidBody2d;
 
     public float jumpVelocity = 1.25f;
+
+    public Animator animator;
     
     // Start is called before the first frame update
     void Start() {
@@ -14,9 +16,12 @@ public class AlooScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         if (Input.GetKeyDown("space")) {
             rigidBody2d.velocity = Vector2.up * jumpVelocity;
         }
+
+        animator.SetBool("isGoingUp", rigidBody2d.velocity.y > 0);
     }
 }
