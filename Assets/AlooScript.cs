@@ -10,7 +10,7 @@ public class AlooScript : MonoBehaviour
     
     // Start is called before the first frame update
     void Start() {
-        
+        rigidBody2d.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     // Update is called once per frame
