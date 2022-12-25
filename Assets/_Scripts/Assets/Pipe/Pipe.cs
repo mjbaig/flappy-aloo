@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Pipe : MonoBehaviour {
 
-    public float moveSpeed = 5;
+    public float moveSpeed = 11;
     
     public float deletePosition = -11;
     
@@ -22,7 +23,6 @@ public class Pipe : MonoBehaviour {
 
         if (transform.position.x < deletePosition)
         {
-            Debug.Log("deleting pipes");
             Destroy(gameObject);
         }
     }
